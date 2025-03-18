@@ -1,0 +1,102 @@
+{
+	"BUILD_DIR" : "/home/dmitry/study/httpserver/build/tests/testhttpserver_autogen",
+	"CMAKE_BINARY_DIR" : "/home/dmitry/study/httpserver/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/dmitry/study/httpserver/build/tests",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/dmitry/study/httpserver/tests",
+	"CMAKE_EXECUTABLE" : "/usr/local/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/dmitry/study/httpserver/tests/CMakeLists.txt",
+		"/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigVersion.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfig.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigExtras.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/dmitry/study/httpserver",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"/home/dmitry/study/httpserver/tests/testhttpserver.h",
+			"Mu",
+			"EWIEGA46WW/moc_testhttpserver.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/dmitry/study/httpserver/build/tests/testhttpserver_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/dmitry/study/httpserver/build/tests/testhttpserver_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_TESTCASE_BUILDDIR=\"/home/dmitry/study/httpserver/build\"",
+		"QT_TESTLIB_LIB",
+		"QT_WIDGETS_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/dmitry/study/httpserver/build/tests",
+		"/home/dmitry/study/httpserver/tests",
+		"/home/dmitry/study/httpserver/include",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtTest",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/g++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/local/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/dmitry/study/httpserver/build/tests/testhttpserver_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/dmitry/study/httpserver/build/tests/CMakeFiles/testhttpserver_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 12,
+	"SETTINGS_FILE" : "/home/dmitry/study/httpserver/build/tests/CMakeFiles/testhttpserver_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "/home/dmitry/study/httpserver/tests/main.cpp", "Mu", null ],
+		[ "/home/dmitry/study/httpserver/tests/testhttpserver.cpp", "Mu", null ]
+	],
+	"VERBOSITY" : 0
+}

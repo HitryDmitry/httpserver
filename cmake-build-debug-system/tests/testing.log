@@ -1,0 +1,16 @@
+********* Start testing of TestHttpServer *********
+Config: Using QtTest library 5.12.8, Qt 5.12.8 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 9.3.0)
+PASS   : TestHttpServer::initTestCase()
+QDEBUG : TestHttpServer::setUpHttpServer() Json config file couldn't be opened/found
+QWARN  : TestHttpServer::setUpHttpServer() QIODevice::read (QFile, "../config.json"): device not open
+PASS   : TestHttpServer::setUpHttpServer()
+QDEBUG : TestHttpServer::sendPromptToYaGpt() Json config file couldn't be opened/found
+QWARN  : TestHttpServer::sendPromptToYaGpt() QIODevice::read (QFile, "../config.json"): device not open
+QDEBUG : TestHttpServer::sendPromptToYaGpt() Json config file couldn't be opened/found
+QWARN  : TestHttpServer::sendPromptToYaGpt() QIODevice::read (QFile, "../config.json"): device not open
+QDEBUG : TestHttpServer::sendPromptToYaGpt() ""
+PASS   : TestHttpServer::sendPromptToYaGpt()
+PASS   : TestHttpServer::promptRequestBodyFilledCorrectly()
+PASS   : TestHttpServer::cleanupTestCase()
+Totals: 5 passed, 0 failed, 0 skipped, 0 blacklisted, 62ms
+********* Finished testing of TestHttpServer *********

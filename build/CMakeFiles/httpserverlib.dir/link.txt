@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhttpserverlib.a CMakeFiles/httpserverlib.dir/httpserverlib_autogen/mocs_compilation.cpp.o CMakeFiles/httpserverlib.dir/source/httpserver.cpp.o
+/usr/bin/ranlib libhttpserverlib.a

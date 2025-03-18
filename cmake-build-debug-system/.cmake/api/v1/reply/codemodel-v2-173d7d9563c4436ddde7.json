@@ -1,0 +1,138 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-Debug-b01f6abb0ab61427ef3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "HTTPServer",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "testhttpserver",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "httpserver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-httpserver-Debug-a325c2042ec2145fe882.json",
+					"name" : "httpserver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "httpserver_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-httpserver_autogen-Debug-83bad20aa21375482775.json",
+					"name" : "httpserver_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "httpserverlib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-httpserverlib-Debug-ad3ffc1c25770772b64b.json",
+					"name" : "httpserverlib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "httpserverlib_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-httpserverlib_autogen-Debug-5e7418508466ed3116ce.json",
+					"name" : "httpserverlib_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "testhttpserver::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-testhttpserver-Debug-aa4d860259b555d5b891.json",
+					"name" : "testhttpserver",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "testhttpserver_autogen::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-testhttpserver_autogen-Debug-d6cd8f3a783a379c0c02.json",
+					"name" : "testhttpserver_autogen",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dmitry/study/httpserver/cmake-build-debug-system",
+		"source" : "/home/dmitry/study/httpserver"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

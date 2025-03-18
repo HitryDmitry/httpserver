@@ -1,0 +1,21 @@
+{
+    "completionOptions": {
+        "maxTokens": "2000",
+        "reasoningOptions": {
+            "mode": "DISABLED"
+        },
+        "stream": false,
+        "temperature": 0.6
+    },
+    "messages": [
+        {
+            "role": "system",
+            "text": "Ты умный ассистент"
+        },
+        {
+            "role": "user",
+            "text": "Расскажи мне про ежей"
+        }
+    ],
+    "modelUri": "gpt://b1gkbj5m380bv0hq7c0u/yandexgpt"
+}

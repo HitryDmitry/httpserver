@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/home/dmitry/study/httpserver/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/dmitry/study/httpserver/build -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/build/httpserverlib_autogen/include -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -fPIC -o CMakeFiles/httpserverlib.dir/httpserverlib_autogen/mocs_compilation.cpp.o -c /home/dmitry/study/httpserver/build/httpserverlib_autogen/mocs_compilation.cpp",
+  "file": "/home/dmitry/study/httpserver/build/httpserverlib_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/httpserverlib.dir/httpserverlib_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/dmitry/study/httpserver/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/dmitry/study/httpserver/build -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/build/httpserverlib_autogen/include -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -fPIC -o CMakeFiles/httpserverlib.dir/source/httpserver.cpp.o -c /home/dmitry/study/httpserver/source/httpserver.cpp",
+  "file": "/home/dmitry/study/httpserver/source/httpserver.cpp",
+  "output": "CMakeFiles/httpserverlib.dir/source/httpserver.cpp.o"
+},
+{
+  "directory": "/home/dmitry/study/httpserver/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/dmitry/study/httpserver/build -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/build/httpserver_autogen/include -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -fPIC -o CMakeFiles/httpserver.dir/httpserver_autogen/mocs_compilation.cpp.o -c /home/dmitry/study/httpserver/build/httpserver_autogen/mocs_compilation.cpp",
+  "file": "/home/dmitry/study/httpserver/build/httpserver_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/httpserver.dir/httpserver_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/dmitry/study/httpserver/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB -I/home/dmitry/study/httpserver/build -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/build/httpserver_autogen/include -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -g -fPIC -o CMakeFiles/httpserver.dir/source/main.cpp.o -c /home/dmitry/study/httpserver/source/main.cpp",
+  "file": "/home/dmitry/study/httpserver/source/main.cpp",
+  "output": "CMakeFiles/httpserver.dir/source/main.cpp.o"
+},
+{
+  "directory": "/home/dmitry/study/httpserver/build/tests",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_TESTCASE_BUILDDIR=\\\"/home/dmitry/study/httpserver/build\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/home/dmitry/study/httpserver/build/tests -I/home/dmitry/study/httpserver/tests -I/home/dmitry/study/httpserver/build/tests/testhttpserver_autogen/include -I/ -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtTest -g -fPIC -o CMakeFiles/testhttpserver.dir/testhttpserver_autogen/mocs_compilation.cpp.o -c /home/dmitry/study/httpserver/build/tests/testhttpserver_autogen/mocs_compilation.cpp",
+  "file": "/home/dmitry/study/httpserver/build/tests/testhttpserver_autogen/mocs_compilation.cpp",
+  "output": "tests/CMakeFiles/testhttpserver.dir/testhttpserver_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/dmitry/study/httpserver/build/tests",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_TESTCASE_BUILDDIR=\\\"/home/dmitry/study/httpserver/build\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/home/dmitry/study/httpserver/build/tests -I/home/dmitry/study/httpserver/tests -I/home/dmitry/study/httpserver/build/tests/testhttpserver_autogen/include -I/ -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtTest -g -fPIC -o CMakeFiles/testhttpserver.dir/testhttpserver.cpp.o -c /home/dmitry/study/httpserver/tests/testhttpserver.cpp",
+  "file": "/home/dmitry/study/httpserver/tests/testhttpserver.cpp",
+  "output": "tests/CMakeFiles/testhttpserver.dir/testhttpserver.cpp.o"
+},
+{
+  "directory": "/home/dmitry/study/httpserver/build/tests",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_TESTCASE_BUILDDIR=\\\"/home/dmitry/study/httpserver/build\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/home/dmitry/study/httpserver/build/tests -I/home/dmitry/study/httpserver/tests -I/home/dmitry/study/httpserver/build/tests/testhttpserver_autogen/include -I/ -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtTest -g -fPIC -o CMakeFiles/testhttpserver.dir/main.cpp.o -c /home/dmitry/study/httpserver/tests/main.cpp",
+  "file": "/home/dmitry/study/httpserver/tests/main.cpp",
+  "output": "tests/CMakeFiles/testhttpserver.dir/main.cpp.o"
+}
+]

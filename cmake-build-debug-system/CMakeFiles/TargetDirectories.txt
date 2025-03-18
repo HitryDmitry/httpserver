@@ -1,0 +1,12 @@
+/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/httpserverlib.dir
+/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/httpserver.dir
+/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/test.dir
+/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/edit_cache.dir
+/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/rebuild_cache.dir
+/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/httpserverlib_autogen.dir
+/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/httpserver_autogen.dir
+/home/dmitry/study/httpserver/cmake-build-debug-system/tests/CMakeFiles/testhttpserver.dir
+/home/dmitry/study/httpserver/cmake-build-debug-system/tests/CMakeFiles/test.dir
+/home/dmitry/study/httpserver/cmake-build-debug-system/tests/CMakeFiles/edit_cache.dir
+/home/dmitry/study/httpserver/cmake-build-debug-system/tests/CMakeFiles/rebuild_cache.dir
+/home/dmitry/study/httpserver/cmake-build-debug-system/tests/CMakeFiles/testhttpserver_autogen.dir

@@ -1,0 +1,5 @@
+{
+    "OAuthToken" : "y0__xD30bnKARjB3RMgpvKDlRKpT5AYYhkVXngglnORe0YFmAuHHQ",
+    "getIamTokenUrl" : "https://iam.api.cloud.yandex.net/iam/v1/tokens",
+    "modelUrl" : "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
+}

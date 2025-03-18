@@ -1,0 +1,22 @@
+{
+    "modelUri": "gpt://b1gkbj5m380bv0hq7c0u/yandexgpt",
+    "completionOptions": {
+      "stream": false,
+      "temperature": 0.6,
+      "maxTokens": "2000",
+      "reasoningOptions": {
+        "mode": "DISABLED"
+      }
+    },
+    "messages": [
+      {
+        "role": "system",
+        "text": "Ты умный ассистент"
+      },
+      {
+        "role": "user",
+        "text": "Как добраться до Пекина?"
+      }
+    ]
+  }
+  
