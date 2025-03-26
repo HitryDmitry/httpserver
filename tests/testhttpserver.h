@@ -1,23 +1,21 @@
 #ifndef TEST_HTTP_SERVER_H
 #define TEST_HTTP_SERVER_H
 
+#include "httpserver.h"
+
 #include <QTest>
 #include <QDebug>
 #include <QCoreApplication>
-#include "httpserver.h"
+#include <memory>
+#include <gtest/gtest.h>
 
 class QJsonObject;
 
-class TestHttpServer : public QObject
+class TestHttpServer : public testing::Test
 {
-    Q_OBJECT
 public:
-    explicit TestHttpServer(QObject *parent = 0);
-
-private slots:
-    void setUpHttpServer();
-    void sendPromptToYaGpt();
-    void promptRequestBodyFilledCorrectly();
+    TestHttpServer();
+    std::unique_ptr<HttpServer> httpServer;
 };
 
 #endif // TEST_HTTP_SERVER_H

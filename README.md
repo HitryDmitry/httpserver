@@ -21,7 +21,7 @@
 
 1. Клонируйте репозиторий:
 ```
-   git clone <repo_name>
+   git clone git@github.com:HitryDmitry/httpserver.git
    cd repo_name
 ```
 2. Создайте директорию для сборки:
@@ -46,9 +46,9 @@
    cp ../config.json .
    cp ../prompt_request_body.json .
 ```
-2. Запустите сервер:
+2. Запустите тестовое приложение:
 ```
-   ./httpserver
+   ./testhttpserver
 ```
 ## Конфигурационные файлы
 

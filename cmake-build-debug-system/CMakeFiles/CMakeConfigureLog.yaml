@@ -512,3 +512,106 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "googletest/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "googletest/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-zL5Aan"
+      binary: "/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-zL5Aan"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-zL5Aan'
+        
+        Run Build Command(s): /home/dmitry/clion-2024.1.6/bin/ninja/linux/x64/ninja -v cmTC_03425
+        [1/2] /bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_03425.dir/src.c.o -c /home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-zL5Aan/src.c
+        [2/2] : && /bin/cc   CMakeFiles/cmTC_03425.dir/src.c.o -o cmTC_03425   && :
+        FAILED: cmTC_03425 
+        : && /bin/cc   CMakeFiles/cmTC_03425.dir/src.c.o -o cmTC_03425   && :
+        /bin/ld: CMakeFiles/cmTC_03425.dir/src.c.o: in function `main':
+        src.c:(.text+0x46): undefined reference to `pthread_create'
+        /bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+        /bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+        /bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+        collect2: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "googletest/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "googletest/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-YmIWMl"
+      binary: "/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-YmIWMl"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-YmIWMl'
+        
+        Run Build Command(s): /home/dmitry/clion-2024.1.6/bin/ninja/linux/x64/ninja -v cmTC_d40db
+        [1/2] /bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -fdiagnostics-color=always -o CMakeFiles/cmTC_d40db.dir/CheckFunctionExists.c.o -c /home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-YmIWMl/CheckFunctionExists.c
+        [2/2] : && /bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_d40db.dir/CheckFunctionExists.c.o -o cmTC_d40db  -lpthreads && :
+        FAILED: cmTC_d40db 
+        : && /bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_d40db.dir/CheckFunctionExists.c.o -o cmTC_d40db  -lpthreads && :
+        /bin/ld: cannot find -lpthreads
+        collect2: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "googletest/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "googletest/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-fbkHkm"
+      binary: "/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-fbkHkm"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-fbkHkm'
+        
+        Run Build Command(s): /home/dmitry/clion-2024.1.6/bin/ninja/linux/x64/ninja -v cmTC_2e020
+        [1/2] /bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -fdiagnostics-color=always -o CMakeFiles/cmTC_2e020.dir/CheckFunctionExists.c.o -c /home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/CMakeScratch/TryCompile-fbkHkm/CheckFunctionExists.c
+        [2/2] : && /bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_2e020.dir/CheckFunctionExists.c.o -o cmTC_2e020  -lpthread && :
+        
+      exitCode: 0
+...

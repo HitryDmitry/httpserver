@@ -47,21 +47,21 @@ cmake_ninja_workdir = /home/dmitry/study/httpserver/cmake-build-debug-system/
 #############################################
 # Order-only phony target for httpserverlib
 
-build cmake_object_order_depends_target_httpserverlib: phony || httpserverlib_autogen
+build cmake_object_order_depends_target_httpserverlib: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main httpserverlib_autogen
 
 build CMakeFiles/httpserverlib.dir/httpserverlib_autogen/mocs_compilation.cpp.o: CXX_COMPILER__httpserverlib_unscanned_Debug /home/dmitry/study/httpserver/cmake-build-debug-system/httpserverlib_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_httpserverlib
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/httpserverlib.dir/httpserverlib_autogen/mocs_compilation.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -fPIC
-  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/cmake-build-debug-system/httpserverlib_autogen/include -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/cmake-build-debug-system/httpserverlib_autogen/include -I/home/dmitry/study/httpserver/include -isystem /home/dmitry/study/httpserver/googletest/googletest/include -isystem /home/dmitry/study/httpserver/googletest/googletest -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui
   OBJECT_DIR = CMakeFiles/httpserverlib.dir
   OBJECT_FILE_DIR = CMakeFiles/httpserverlib.dir/httpserverlib_autogen
 
 build CMakeFiles/httpserverlib.dir/source/httpserver.cpp.o: CXX_COMPILER__httpserverlib_unscanned_Debug /home/dmitry/study/httpserver/source/httpserver.cpp || cmake_object_order_depends_target_httpserverlib
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/httpserverlib.dir/source/httpserver.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -fPIC
-  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/cmake-build-debug-system/httpserverlib_autogen/include -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/cmake-build-debug-system/httpserverlib_autogen/include -I/home/dmitry/study/httpserver/include -isystem /home/dmitry/study/httpserver/googletest/googletest/include -isystem /home/dmitry/study/httpserver/googletest/googletest -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui
   OBJECT_DIR = CMakeFiles/httpserverlib.dir
   OBJECT_FILE_DIR = CMakeFiles/httpserverlib.dir/source
 
@@ -73,7 +73,7 @@ build CMakeFiles/httpserverlib.dir/source/httpserver.cpp.o: CXX_COMPILER__httpse
 #############################################
 # Link the static library libhttpserverlib.a
 
-build libhttpserverlib.a: CXX_STATIC_LIBRARY_LINKER__httpserverlib_Debug CMakeFiles/httpserverlib.dir/httpserverlib_autogen/mocs_compilation.cpp.o CMakeFiles/httpserverlib.dir/source/httpserver.cpp.o || httpserverlib_autogen
+build libhttpserverlib.a: CXX_STATIC_LIBRARY_LINKER__httpserverlib_Debug CMakeFiles/httpserverlib.dir/httpserverlib_autogen/mocs_compilation.cpp.o CMakeFiles/httpserverlib.dir/source/httpserver.cpp.o || httpserverlib_autogen lib/libgtest.a lib/libgtest_main.a
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/httpserverlib.dir
   POST_BUILD = :
@@ -88,21 +88,21 @@ build libhttpserverlib.a: CXX_STATIC_LIBRARY_LINKER__httpserverlib_Debug CMakeFi
 #############################################
 # Order-only phony target for httpserver
 
-build cmake_object_order_depends_target_httpserver: phony || cmake_object_order_depends_target_httpserverlib httpserver_autogen
+build cmake_object_order_depends_target_httpserver: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_httpserverlib httpserver_autogen
 
 build CMakeFiles/httpserver.dir/httpserver_autogen/mocs_compilation.cpp.o: CXX_COMPILER__httpserver_unscanned_Debug /home/dmitry/study/httpserver/cmake-build-debug-system/httpserver_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_httpserver
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/httpserver.dir/httpserver_autogen/mocs_compilation.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -fPIC
-  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/cmake-build-debug-system/httpserver_autogen/include -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/cmake-build-debug-system/httpserver_autogen/include -I/home/dmitry/study/httpserver/include -isystem /home/dmitry/study/httpserver/googletest/googletest/include -isystem /home/dmitry/study/httpserver/googletest/googletest -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui
   OBJECT_DIR = CMakeFiles/httpserver.dir
   OBJECT_FILE_DIR = CMakeFiles/httpserver.dir/httpserver_autogen
 
 build CMakeFiles/httpserver.dir/source/main.cpp.o: CXX_COMPILER__httpserver_unscanned_Debug /home/dmitry/study/httpserver/source/main.cpp || cmake_object_order_depends_target_httpserver
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/httpserver.dir/source/main.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -fPIC
-  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/cmake-build-debug-system/httpserver_autogen/include -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system -I/home/dmitry/study/httpserver -I/home/dmitry/study/httpserver/cmake-build-debug-system/httpserver_autogen/include -I/home/dmitry/study/httpserver/include -isystem /home/dmitry/study/httpserver/googletest/googletest/include -isystem /home/dmitry/study/httpserver/googletest/googletest -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui
   OBJECT_DIR = CMakeFiles/httpserver.dir
   OBJECT_FILE_DIR = CMakeFiles/httpserver.dir/source
 
@@ -114,9 +114,9 @@ build CMakeFiles/httpserver.dir/source/main.cpp.o: CXX_COMPILER__httpserver_unsc
 #############################################
 # Link the executable httpserver
 
-build httpserver: CXX_EXECUTABLE_LINKER__httpserver_Debug CMakeFiles/httpserver.dir/httpserver_autogen/mocs_compilation.cpp.o CMakeFiles/httpserver.dir/source/main.cpp.o | libhttpserverlib.a /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8 || httpserver_autogen libhttpserverlib.a
+build httpserver: CXX_EXECUTABLE_LINKER__httpserver_Debug CMakeFiles/httpserver.dir/httpserver_autogen/mocs_compilation.cpp.o CMakeFiles/httpserver.dir/source/main.cpp.o | libhttpserverlib.a /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8 lib/libgtest_main.a lib/libgtest.a || httpserver_autogen lib/libgtest.a lib/libgtest_main.a libhttpserverlib.a
   FLAGS = -g
-  LINK_LIBRARIES = libhttpserverlib.a  /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
+  LINK_LIBRARIES = libhttpserverlib.a  /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8  lib/libgtest_main.a  lib/libgtest.a  -lpthread
   OBJECT_DIR = CMakeFiles/httpserver.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -160,9 +160,51 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 
 #############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+
+#############################################
 # Utility command for httpserverlib_autogen
 
-build httpserverlib_autogen: phony CMakeFiles/httpserverlib_autogen httpserverlib_autogen/mocs_compilation.cpp
+build httpserverlib_autogen: phony CMakeFiles/httpserverlib_autogen httpserverlib_autogen/mocs_compilation.cpp lib/libgtest.a lib/libgtest_main.a
 
 
 #############################################
@@ -174,7 +216,7 @@ build httpserver_autogen: phony CMakeFiles/httpserver_autogen httpserver_autogen
 #############################################
 # Custom command for CMakeFiles/httpserverlib_autogen
 
-build CMakeFiles/httpserverlib_autogen httpserverlib_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}CMakeFiles/httpserverlib_autogen ${cmake_ninja_workdir}httpserverlib_autogen/mocs_compilation.cpp: CUSTOM_COMMAND
+build CMakeFiles/httpserverlib_autogen httpserverlib_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}CMakeFiles/httpserverlib_autogen ${cmake_ninja_workdir}httpserverlib_autogen/mocs_compilation.cpp: CUSTOM_COMMAND || googletest/googletest/gtest_autogen googletest/googletest/gtest_main_autogen lib/libgtest.a lib/libgtest_main.a
   COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/httpserverlib_autogen.dir/AutogenInfo.json Debug
   DESC = Automatic MOC for target httpserverlib
   restat = 1
@@ -183,9 +225,471 @@ build CMakeFiles/httpserverlib_autogen httpserverlib_autogen/mocs_compilation.cp
 #############################################
 # Custom command for CMakeFiles/httpserver_autogen
 
-build CMakeFiles/httpserver_autogen httpserver_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}CMakeFiles/httpserver_autogen ${cmake_ninja_workdir}httpserver_autogen/mocs_compilation.cpp: CUSTOM_COMMAND || httpserverlib_autogen libhttpserverlib.a
+build CMakeFiles/httpserver_autogen httpserver_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}CMakeFiles/httpserver_autogen ${cmake_ninja_workdir}httpserver_autogen/mocs_compilation.cpp: CUSTOM_COMMAND || googletest/googletest/gtest_autogen googletest/googletest/gtest_main_autogen httpserverlib_autogen lib/libgtest.a lib/libgtest_main.a libhttpserverlib.a
   COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/dmitry/study/httpserver/cmake-build-debug-system/CMakeFiles/httpserver_autogen.dir/AutogenInfo.json Debug
   DESC = Automatic MOC for target httpserver
+  restat = 1
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/dmitry/study/httpserver/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for test
+
+build googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build googletest/test: phony googletest/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build googletest/edit_cache: phony googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/dmitry/study/httpserver -B/home/dmitry/study/httpserver/cmake-build-debug-system
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build googletest/rebuild_cache: phony googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build googletest/CMakeFiles/install.util: CUSTOM_COMMAND googletest/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build googletest/install: phony googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND googletest/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build googletest/install/local: phony googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND googletest/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build googletest/install/strip: phony googletest/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/dmitry/study/httpserver/googletest/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest googletest/googlemock/gmock_autogen
+
+build googletest/googlemock/CMakeFiles/gmock.dir/gmock_autogen/mocs_compilation.cpp.o: CXX_COMPILER__gmock_unscanned_Debug /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock/gmock_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_gmock
+  DEP_FILE = googletest/googlemock/CMakeFiles/gmock.dir/gmock_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock -I/home/dmitry/study/httpserver/googletest/googlemock -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock/gmock_autogen/include -I/home/dmitry/study/httpserver/googletest/googlemock/include -isystem /home/dmitry/study/httpserver/googletest/googletest/include -isystem /home/dmitry/study/httpserver/googletest/googletest
+  OBJECT_DIR = googletest/googlemock/CMakeFiles/gmock.dir
+  OBJECT_FILE_DIR = googletest/googlemock/CMakeFiles/gmock.dir/gmock_autogen
+
+build googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_unscanned_Debug /home/dmitry/study/httpserver/googletest/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock -I/home/dmitry/study/httpserver/googletest/googlemock -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock/gmock_autogen/include -I/home/dmitry/study/httpserver/googletest/googlemock/include -isystem /home/dmitry/study/httpserver/googletest/googletest/include -isystem /home/dmitry/study/httpserver/googletest/googletest
+  OBJECT_DIR = googletest/googlemock/CMakeFiles/gmock.dir
+  OBJECT_FILE_DIR = googletest/googlemock/CMakeFiles/gmock.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib/libgmock.a
+
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug googletest/googlemock/CMakeFiles/gmock.dir/gmock_autogen/mocs_compilation.cpp.o googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o || googletest/googlemock/gmock_autogen lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = googletest/googlemock/CMakeFiles/gmock.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgmock.a
+  TARGET_PDB = gmock.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest googletest/googlemock/gmock_main_autogen
+
+build googletest/googlemock/CMakeFiles/gmock_main.dir/gmock_main_autogen/mocs_compilation.cpp.o: CXX_COMPILER__gmock_main_unscanned_Debug /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock/gmock_main_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = googletest/googlemock/CMakeFiles/gmock_main.dir/gmock_main_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock/gmock_main_autogen/include -isystem /home/dmitry/study/httpserver/googletest/googlemock -isystem /home/dmitry/study/httpserver/googletest/googlemock/include -isystem /home/dmitry/study/httpserver/googletest/googletest/include -isystem /home/dmitry/study/httpserver/googletest/googletest
+  OBJECT_DIR = googletest/googlemock/CMakeFiles/gmock_main.dir
+  OBJECT_FILE_DIR = googletest/googlemock/CMakeFiles/gmock_main.dir/gmock_main_autogen
+
+build googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_unscanned_Debug /home/dmitry/study/httpserver/googletest/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock/gmock_main_autogen/include -isystem /home/dmitry/study/httpserver/googletest/googlemock -isystem /home/dmitry/study/httpserver/googletest/googlemock/include -isystem /home/dmitry/study/httpserver/googletest/googletest/include -isystem /home/dmitry/study/httpserver/googletest/googletest
+  OBJECT_DIR = googletest/googlemock/CMakeFiles/gmock_main.dir
+  OBJECT_FILE_DIR = googletest/googlemock/CMakeFiles/gmock_main.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib/libgmock_main.a
+
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug googletest/googlemock/CMakeFiles/gmock_main.dir/gmock_main_autogen/mocs_compilation.cpp.o googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o || googletest/googlemock/gmock_main_autogen lib/libgmock.a lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = googletest/googlemock/CMakeFiles/gmock_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgmock_main.a
+  TARGET_PDB = gmock_main.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build googletest/googlemock/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build googletest/googlemock/test: phony googletest/googlemock/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build googletest/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build googletest/googlemock/edit_cache: phony googletest/googlemock/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build googletest/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/dmitry/study/httpserver -B/home/dmitry/study/httpserver/cmake-build-debug-system
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build googletest/googlemock/rebuild_cache: phony googletest/googlemock/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build googletest/googlemock/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build googletest/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND googletest/googlemock/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build googletest/googlemock/install: phony googletest/googlemock/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build googletest/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND googletest/googlemock/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build googletest/googlemock/install/local: phony googletest/googlemock/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build googletest/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND googletest/googlemock/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build googletest/googlemock/install/strip: phony googletest/googlemock/CMakeFiles/install/strip.util
+
+
+#############################################
+# Utility command for gmock_autogen
+
+build googletest/googlemock/gmock_autogen: phony googletest/googlemock/CMakeFiles/gmock_autogen googletest/googlemock/gmock_autogen/mocs_compilation.cpp lib/libgtest.a
+
+
+#############################################
+# Utility command for gmock_main_autogen
+
+build googletest/googlemock/gmock_main_autogen: phony googletest/googlemock/CMakeFiles/gmock_main_autogen googletest/googlemock/gmock_main_autogen/mocs_compilation.cpp lib/libgmock.a
+
+
+#############################################
+# Custom command for googletest/googlemock/CMakeFiles/gmock_autogen
+
+build googletest/googlemock/CMakeFiles/gmock_autogen googletest/googlemock/gmock_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}googletest/googlemock/CMakeFiles/gmock_autogen ${cmake_ninja_workdir}googletest/googlemock/gmock_autogen/mocs_compilation.cpp: CUSTOM_COMMAND || googletest/googletest/gtest_autogen lib/libgtest.a
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock/CMakeFiles/gmock_autogen.dir/AutogenInfo.json Debug
+  DESC = Automatic MOC for target gmock
+  restat = 1
+
+
+#############################################
+# Custom command for googletest/googlemock/CMakeFiles/gmock_main_autogen
+
+build googletest/googlemock/CMakeFiles/gmock_main_autogen googletest/googlemock/gmock_main_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}googletest/googlemock/CMakeFiles/gmock_main_autogen ${cmake_ninja_workdir}googletest/googlemock/gmock_main_autogen/mocs_compilation.cpp: CUSTOM_COMMAND || googletest/googlemock/gmock_autogen googletest/googletest/gtest_autogen lib/libgmock.a lib/libgtest.a
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenInfo.json Debug
+  DESC = Automatic MOC for target gmock_main
+  restat = 1
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/dmitry/study/httpserver/googletest/googlemock/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || googletest/googletest/gtest_autogen
+
+build googletest/googletest/CMakeFiles/gtest.dir/gtest_autogen/mocs_compilation.cpp.o: CXX_COMPILER__gtest_unscanned_Debug /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest/gtest_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_gtest
+  DEP_FILE = googletest/googletest/CMakeFiles/gtest.dir/gtest_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest -I/home/dmitry/study/httpserver/googletest/googletest -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest/gtest_autogen/include -I/home/dmitry/study/httpserver/googletest/googletest/include
+  OBJECT_DIR = googletest/googletest/CMakeFiles/gtest.dir
+  OBJECT_FILE_DIR = googletest/googletest/CMakeFiles/gtest.dir/gtest_autogen
+
+build googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_unscanned_Debug /home/dmitry/study/httpserver/googletest/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest -I/home/dmitry/study/httpserver/googletest/googletest -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest/gtest_autogen/include -I/home/dmitry/study/httpserver/googletest/googletest/include
+  OBJECT_DIR = googletest/googletest/CMakeFiles/gtest.dir
+  OBJECT_FILE_DIR = googletest/googletest/CMakeFiles/gtest.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib/libgtest.a
+
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug googletest/googletest/CMakeFiles/gtest.dir/gtest_autogen/mocs_compilation.cpp.o googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o || googletest/googletest/gtest_autogen
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = googletest/googletest/CMakeFiles/gtest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgtest.a
+  TARGET_PDB = gtest.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest googletest/googletest/gtest_main_autogen
+
+build googletest/googletest/CMakeFiles/gtest_main.dir/gtest_main_autogen/mocs_compilation.cpp.o: CXX_COMPILER__gtest_main_unscanned_Debug /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest/gtest_main_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = googletest/googletest/CMakeFiles/gtest_main.dir/gtest_main_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest/gtest_main_autogen/include -isystem /home/dmitry/study/httpserver/googletest/googletest -isystem /home/dmitry/study/httpserver/googletest/googletest/include
+  OBJECT_DIR = googletest/googletest/CMakeFiles/gtest_main.dir
+  OBJECT_FILE_DIR = googletest/googletest/CMakeFiles/gtest_main.dir/gtest_main_autogen
+
+build googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_unscanned_Debug /home/dmitry/study/httpserver/googletest/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest -I/home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest/gtest_main_autogen/include -isystem /home/dmitry/study/httpserver/googletest/googletest -isystem /home/dmitry/study/httpserver/googletest/googletest/include
+  OBJECT_DIR = googletest/googletest/CMakeFiles/gtest_main.dir
+  OBJECT_FILE_DIR = googletest/googletest/CMakeFiles/gtest_main.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib/libgtest_main.a
+
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug googletest/googletest/CMakeFiles/gtest_main.dir/gtest_main_autogen/mocs_compilation.cpp.o googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o || googletest/googletest/gtest_main_autogen lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = googletest/googletest/CMakeFiles/gtest_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgtest_main.a
+  TARGET_PDB = gtest_main.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build googletest/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build googletest/googletest/test: phony googletest/googletest/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build googletest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build googletest/googletest/edit_cache: phony googletest/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build googletest/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/dmitry/study/httpserver -B/home/dmitry/study/httpserver/cmake-build-debug-system
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build googletest/googletest/rebuild_cache: phony googletest/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build googletest/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build googletest/googletest/CMakeFiles/install.util: CUSTOM_COMMAND googletest/googletest/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build googletest/googletest/install: phony googletest/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build googletest/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND googletest/googletest/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build googletest/googletest/install/local: phony googletest/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build googletest/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND googletest/googletest/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build googletest/googletest/install/strip: phony googletest/googletest/CMakeFiles/install/strip.util
+
+
+#############################################
+# Utility command for gtest_autogen
+
+build googletest/googletest/gtest_autogen: phony googletest/googletest/CMakeFiles/gtest_autogen googletest/googletest/gtest_autogen/mocs_compilation.cpp
+
+
+#############################################
+# Utility command for gtest_main_autogen
+
+build googletest/googletest/gtest_main_autogen: phony googletest/googletest/CMakeFiles/gtest_main_autogen googletest/googletest/gtest_main_autogen/mocs_compilation.cpp lib/libgtest.a
+
+
+#############################################
+# Custom command for googletest/googletest/CMakeFiles/gtest_autogen
+
+build googletest/googletest/CMakeFiles/gtest_autogen googletest/googletest/gtest_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}googletest/googletest/CMakeFiles/gtest_autogen ${cmake_ninja_workdir}googletest/googletest/gtest_autogen/mocs_compilation.cpp: CUSTOM_COMMAND
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest/CMakeFiles/gtest_autogen.dir/AutogenInfo.json Debug
+  DESC = Automatic MOC for target gtest
+  restat = 1
+
+
+#############################################
+# Custom command for googletest/googletest/CMakeFiles/gtest_main_autogen
+
+build googletest/googletest/CMakeFiles/gtest_main_autogen googletest/googletest/gtest_main_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}googletest/googletest/CMakeFiles/gtest_main_autogen ${cmake_ninja_workdir}googletest/googletest/gtest_main_autogen/mocs_compilation.cpp: CUSTOM_COMMAND || googletest/googletest/gtest_autogen lib/libgtest.a
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest/CMakeFiles/gtest_main_autogen.dir/AutogenInfo.json Debug
+  DESC = Automatic MOC for target gtest_main
   restat = 1
 
 # =============================================================================
@@ -200,29 +704,29 @@ build CMakeFiles/httpserver_autogen httpserver_autogen/mocs_compilation.cpp | ${
 #############################################
 # Order-only phony target for testhttpserver
 
-build cmake_object_order_depends_target_testhttpserver: phony || cmake_object_order_depends_target_httpserverlib tests/testhttpserver_autogen
+build cmake_object_order_depends_target_testhttpserver: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_httpserverlib tests/testhttpserver_autogen
 
 build tests/CMakeFiles/testhttpserver.dir/testhttpserver_autogen/mocs_compilation.cpp.o: CXX_COMPILER__testhttpserver_unscanned_Debug /home/dmitry/study/httpserver/cmake-build-debug-system/tests/testhttpserver_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_testhttpserver
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/dmitry/study/httpserver/cmake-build-debug-system\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB
   DEP_FILE = tests/CMakeFiles/testhttpserver.dir/testhttpserver_autogen/mocs_compilation.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -fPIC
-  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests -I/home/dmitry/study/httpserver/tests -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests/testhttpserver_autogen/include -I/ -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtTest
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests -I/home/dmitry/study/httpserver/tests -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests/testhttpserver_autogen/include -I/ -I/home/dmitry/study/httpserver/include -isystem /home/dmitry/study/httpserver/googletest/googletest/include -isystem /home/dmitry/study/httpserver/googletest/googletest -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtTest
   OBJECT_DIR = tests/CMakeFiles/testhttpserver.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/testhttpserver.dir/testhttpserver_autogen
 
 build tests/CMakeFiles/testhttpserver.dir/testhttpserver.cpp.o: CXX_COMPILER__testhttpserver_unscanned_Debug /home/dmitry/study/httpserver/tests/testhttpserver.cpp || cmake_object_order_depends_target_testhttpserver
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/dmitry/study/httpserver/cmake-build-debug-system\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB
   DEP_FILE = tests/CMakeFiles/testhttpserver.dir/testhttpserver.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -fPIC
-  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests -I/home/dmitry/study/httpserver/tests -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests/testhttpserver_autogen/include -I/ -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtTest
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests -I/home/dmitry/study/httpserver/tests -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests/testhttpserver_autogen/include -I/ -I/home/dmitry/study/httpserver/include -isystem /home/dmitry/study/httpserver/googletest/googletest/include -isystem /home/dmitry/study/httpserver/googletest/googletest -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtTest
   OBJECT_DIR = tests/CMakeFiles/testhttpserver.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/testhttpserver.dir
 
 build tests/CMakeFiles/testhttpserver.dir/main.cpp.o: CXX_COMPILER__testhttpserver_unscanned_Debug /home/dmitry/study/httpserver/tests/main.cpp || cmake_object_order_depends_target_testhttpserver
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_TESTCASE_BUILDDIR=\"/home/dmitry/study/httpserver/cmake-build-debug-system\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB
   DEP_FILE = tests/CMakeFiles/testhttpserver.dir/main.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always -fPIC
-  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests -I/home/dmitry/study/httpserver/tests -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests/testhttpserver_autogen/include -I/ -I/home/dmitry/study/httpserver/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtTest
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests -I/home/dmitry/study/httpserver/tests -I/home/dmitry/study/httpserver/cmake-build-debug-system/tests/testhttpserver_autogen/include -I/ -I/home/dmitry/study/httpserver/include -isystem /home/dmitry/study/httpserver/googletest/googletest/include -isystem /home/dmitry/study/httpserver/googletest/googletest -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtTest
   OBJECT_DIR = tests/CMakeFiles/testhttpserver.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/testhttpserver.dir
 
@@ -234,9 +738,9 @@ build tests/CMakeFiles/testhttpserver.dir/main.cpp.o: CXX_COMPILER__testhttpserv
 #############################################
 # Link the executable tests/testhttpserver
 
-build tests/testhttpserver: CXX_EXECUTABLE_LINKER__testhttpserver_Debug tests/CMakeFiles/testhttpserver.dir/testhttpserver_autogen/mocs_compilation.cpp.o tests/CMakeFiles/testhttpserver.dir/testhttpserver.cpp.o tests/CMakeFiles/testhttpserver.dir/main.cpp.o | libhttpserverlib.a /usr/lib/x86_64-linux-gnu/libQt5Test.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8 || libhttpserverlib.a tests/testhttpserver_autogen
+build tests/testhttpserver: CXX_EXECUTABLE_LINKER__testhttpserver_Debug tests/CMakeFiles/testhttpserver.dir/testhttpserver_autogen/mocs_compilation.cpp.o tests/CMakeFiles/testhttpserver.dir/testhttpserver.cpp.o tests/CMakeFiles/testhttpserver.dir/main.cpp.o | libhttpserverlib.a /usr/lib/x86_64-linux-gnu/libQt5Test.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8 lib/libgtest_main.a lib/libgtest.a /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8 || lib/libgtest.a lib/libgtest_main.a libhttpserverlib.a tests/testhttpserver_autogen
   FLAGS = -g
-  LINK_LIBRARIES = libhttpserverlib.a  /usr/lib/x86_64-linux-gnu/libQt5Test.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
+  LINK_LIBRARIES = libhttpserverlib.a  /usr/lib/x86_64-linux-gnu/libQt5Test.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8  lib/libgtest_main.a  lib/libgtest.a  -lpthread  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
   OBJECT_DIR = tests/CMakeFiles/testhttpserver.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -280,6 +784,48 @@ build tests/rebuild_cache: phony tests/CMakeFiles/rebuild_cache.util
 
 
 #############################################
+# Utility command for list_install_components
+
+build tests/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build tests/CMakeFiles/install.util: CUSTOM_COMMAND tests/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/tests && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build tests/install: phony tests/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build tests/CMakeFiles/install/local.util: CUSTOM_COMMAND tests/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/tests && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build tests/install/local: phony tests/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build tests/CMakeFiles/install/strip.util: CUSTOM_COMMAND tests/all
+  COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/tests && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build tests/install/strip: phony tests/CMakeFiles/install/strip.util
+
+
+#############################################
 # Utility command for testhttpserver_autogen
 
 build tests/testhttpserver_autogen: phony tests/CMakeFiles/testhttpserver_autogen tests/testhttpserver_autogen/mocs_compilation.cpp libhttpserverlib.a
@@ -288,7 +834,7 @@ build tests/testhttpserver_autogen: phony tests/CMakeFiles/testhttpserver_autoge
 #############################################
 # Custom command for tests/CMakeFiles/testhttpserver_autogen
 
-build tests/CMakeFiles/testhttpserver_autogen tests/testhttpserver_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}tests/CMakeFiles/testhttpserver_autogen ${cmake_ninja_workdir}tests/testhttpserver_autogen/mocs_compilation.cpp: CUSTOM_COMMAND || httpserverlib_autogen libhttpserverlib.a
+build tests/CMakeFiles/testhttpserver_autogen tests/testhttpserver_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}tests/CMakeFiles/testhttpserver_autogen ${cmake_ninja_workdir}tests/testhttpserver_autogen/mocs_compilation.cpp: CUSTOM_COMMAND || googletest/googletest/gtest_autogen googletest/googletest/gtest_main_autogen httpserverlib_autogen lib/libgtest.a lib/libgtest_main.a libhttpserverlib.a
   COMMAND = cd /home/dmitry/study/httpserver/cmake-build-debug-system/tests && /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/dmitry/study/httpserver/cmake-build-debug-system/tests/CMakeFiles/testhttpserver_autogen.dir/AutogenInfo.json Debug
   DESC = Automatic MOC for target testhttpserver
   restat = 1
@@ -296,7 +842,31 @@ build tests/CMakeFiles/testhttpserver_autogen tests/testhttpserver_autogen/mocs_
 # =============================================================================
 # Target aliases.
 
+build gmock: phony lib/libgmock.a
+
+build gmock_autogen: phony googletest/googlemock/gmock_autogen
+
+build gmock_main: phony lib/libgmock_main.a
+
+build gmock_main_autogen: phony googletest/googlemock/gmock_main_autogen
+
+build gtest: phony lib/libgtest.a
+
+build gtest_autogen: phony googletest/googletest/gtest_autogen
+
+build gtest_main: phony lib/libgtest_main.a
+
+build gtest_main_autogen: phony googletest/googletest/gtest_main_autogen
+
 build httpserverlib: phony libhttpserverlib.a
+
+build libgmock.a: phony lib/libgmock.a
+
+build libgmock_main.a: phony lib/libgmock_main.a
+
+build libgtest.a: phony lib/libgtest.a
+
+build libgtest_main.a: phony lib/libgtest_main.a
 
 build testhttpserver: phony tests/testhttpserver
 
@@ -310,7 +880,28 @@ build testhttpserver_autogen: phony tests/testhttpserver_autogen
 #############################################
 # Folder: /home/dmitry/study/httpserver/cmake-build-debug-system
 
-build all: phony libhttpserverlib.a httpserver tests/all
+build all: phony libhttpserverlib.a httpserver googletest/all tests/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/dmitry/study/httpserver/cmake-build-debug-system/googletest
+
+build googletest/all: phony googletest/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googlemock
+
+build googletest/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a googletest/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/dmitry/study/httpserver/cmake-build-debug-system/googletest/googletest
+
+build googletest/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 
 # =============================================================================
 
@@ -326,14 +917,14 @@ build tests/all: phony tests/testhttpserver
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseArguments.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/dmitry/study/httpserver/CMakeLists.txt /home/dmitry/study/httpserver/tests/CMakeLists.txt /lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake /lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake CMakeCache.txt CMakeFiles/3.28.6/CMakeCCompiler.cmake CMakeFiles/3.28.6/CMakeCXXCompiler.cmake CMakeFiles/3.28.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDependentOption.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseArguments.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/GNUInstallDirs.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /home/dmitry/study/httpserver/CMakeLists.txt /home/dmitry/study/httpserver/googletest/CMakeLists.txt /home/dmitry/study/httpserver/googletest/googlemock/CMakeLists.txt /home/dmitry/study/httpserver/googletest/googlemock/cmake/gmock.pc.in /home/dmitry/study/httpserver/googletest/googlemock/cmake/gmock_main.pc.in /home/dmitry/study/httpserver/googletest/googletest/CMakeLists.txt /home/dmitry/study/httpserver/googletest/googletest/cmake/Config.cmake.in /home/dmitry/study/httpserver/googletest/googletest/cmake/gtest.pc.in /home/dmitry/study/httpserver/googletest/googletest/cmake/gtest_main.pc.in /home/dmitry/study/httpserver/googletest/googletest/cmake/internal_utils.cmake /home/dmitry/study/httpserver/tests/CMakeLists.txt /lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake /lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake CMakeCache.txt CMakeFiles/3.28.6/CMakeCCompiler.cmake CMakeFiles/3.28.6/CMakeCXXCompiler.cmake CMakeFiles/3.28.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseArguments.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/dmitry/study/httpserver/CMakeLists.txt /home/dmitry/study/httpserver/tests/CMakeLists.txt /lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake /lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake CMakeCache.txt CMakeFiles/3.28.6/CMakeCCompiler.cmake CMakeFiles/3.28.6/CMakeCXXCompiler.cmake CMakeFiles/3.28.6/CMakeSystem.cmake: phony
+build /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDependentOption.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseArguments.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindThreads.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/GNUInstallDirs.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/dmitry/clion-2024.1.6/bin/cmake/linux/x64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake /home/dmitry/study/httpserver/CMakeLists.txt /home/dmitry/study/httpserver/googletest/CMakeLists.txt /home/dmitry/study/httpserver/googletest/googlemock/CMakeLists.txt /home/dmitry/study/httpserver/googletest/googlemock/cmake/gmock.pc.in /home/dmitry/study/httpserver/googletest/googlemock/cmake/gmock_main.pc.in /home/dmitry/study/httpserver/googletest/googletest/CMakeLists.txt /home/dmitry/study/httpserver/googletest/googletest/cmake/Config.cmake.in /home/dmitry/study/httpserver/googletest/googletest/cmake/gtest.pc.in /home/dmitry/study/httpserver/googletest/googletest/cmake/gtest_main.pc.in /home/dmitry/study/httpserver/googletest/googletest/cmake/internal_utils.cmake /home/dmitry/study/httpserver/tests/CMakeLists.txt /lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake /lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake /lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake CMakeCache.txt CMakeFiles/3.28.6/CMakeCCompiler.cmake CMakeFiles/3.28.6/CMakeCXXCompiler.cmake CMakeFiles/3.28.6/CMakeSystem.cmake: phony
 
 
 #############################################

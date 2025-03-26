@@ -11,8 +11,11 @@ set(SOURCES ${CMAKE_SOURCE_DIR}/include/httpserver.h
         ${CMAKE_SOURCE_DIR}/source/httpserver.cpp
 )
 
+add_subdirectory(googletest)
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+
 add_library(httpserverlib ${SOURCES})
-target_link_libraries(httpserverlib Qt5::Core Qt5::Network Qt5::Widgets)
+target_link_libraries(httpserverlib Qt5::Core Qt5::Network Qt5::Widgets gtest gtest_main)
 target_include_directories(httpserverlib PUBLIC ${CMAKE_SOURCE_DIR}/include)
 add_executable(httpserver ${CMAKE_SOURCE_DIR}/source/main.cpp)
 

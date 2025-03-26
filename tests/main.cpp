@@ -1,22 +1,14 @@
+#include "httpserver.h"
+#include "testhttpserver.h"
+
 #include <QApplication>
 #include <QMainWindow>
 #include <QVBoxLayout>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QTextEdit>
-#include "httpserver.h"
 #include <QFile>
-
-QByteArray readFromFile(const QString& filename)
-{
-    QFile file(filename);
-    if(!file.exists()) {
-        throw std::runtime_error("No file with name " + filename.toStdString());
-    }
-    file.open(QIODevice::ReadOnly | QIODevice::Text);
-    QByteArray arr = file.readAll();
-    return arr;
-}
+#include <QTest>
 
 class MainWindow : public QMainWindow {
 Q_OBJECT
@@ -66,6 +58,7 @@ private:
     HttpServer* httpServer;
 };
 
+// Тестирование с помощью GUI
 int main(int argc, char* argv[]) {
     QApplication app(argc, argv);
 
@@ -76,5 +69,17 @@ int main(int argc, char* argv[]) {
 
     return app.exec();
 }
+
+// Неудачная попытка создать тесты (неработает ивент луп)
+//int main(int argc, char **argv) {
+//    testing::InitGoogleTest(&argc, argv);
+//    auto res = RUN_ALL_TESTS();
+//
+//    QCoreApplication app(argc, argv);
+//    app.setAttribute(Qt::AA_Use96Dpi, true);
+//    HttpServer ts;
+//    QTEST_SET_MAIN_SOURCE_PATH
+//    return app.exec() && res;
+//}
 
 #include "main.moc"

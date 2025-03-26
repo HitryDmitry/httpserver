@@ -1,0 +1,15 @@
+# Compiler outputs #
+*.a
+*.bat
+*.exe
+
+# Directories #
+.idea
+.vscode
+build
+cmake-build-debug-system
+
+# Packages #
+*.gz
+*.iso
+*.jar
