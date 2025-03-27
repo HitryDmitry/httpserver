@@ -1,6 +1,0 @@
-********* Start testing of TestHttpServer *********
-Config: Using QtTest library 5.12.8, Qt 5.12.8 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 9.3.0)
-PASS   : TestHttpServer::initTestCase()
-PASS   : TestHttpServer::cleanupTestCase()
-Totals: 2 passed, 0 failed, 0 skipped, 0 blacklisted, 0ms
-********* Finished testing of TestHttpServer *********
